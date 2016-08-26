@@ -61,28 +61,32 @@ fi
 
 if [ "$INPUT" -eq 0 ] ; then
 
-	echo ""
-	echo "Which would you like to reset?"
-	echo "==============="
-	echo ""
-	echo "1. Font Color"
-	echo "2. Background Color"
-	echo "3. Attribute"
-	echo ""
-	read -p "COLORS: > " ZERO_OPTION
+	FONT_COLOR=0
+	BACKGROUND_COLOR=0
+	ATTRIBUTE=0
 
-	case $ZERO_OPTION in
-		1) FONT_COLOR=0
-		;;
-		2) BACKGROUND_COLOR=0
-		;;
-		3) ATTRIBUTE=0
-		;;
-		*) echo "" 
-		echo "Out of range: $ZERO_OPTION"
-		sleep 1
-		;;
-	esac
+#	echo ""
+#	echo "Which would you like to reset?"
+#	echo "==============="
+#	echo ""
+#	echo "1. Font Color"
+#	echo "2. Background Color"
+#	echo "3. Attribute"
+#	echo ""
+#	read -p "COLORS: > " ZERO_OPTION
+#
+#	case $ZERO_OPTION in
+#		1) FONT_COLOR=0
+#		;;
+#		2) BACKGROUND_COLOR=0
+#		;;
+#		3) ATTRIBUTE=0
+#		;;
+#		*) echo "" 
+#		echo "Out of range: $ZERO_OPTION"
+#		sleep 1
+#		;;
+#	esac
 
 	FORMAT_INPUT
 	DISPLAY_TEXT
