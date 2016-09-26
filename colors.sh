@@ -48,8 +48,13 @@ DISPLAY_TEXT
 
 read -p "COLORS: > " INPUT
 
+# First, check if the user is wanting to exit
 
-# First, check that we're being provided an integer
+if [[ "$INPUT" == "exit" ]] || [[ "$INPUT" == "quit" ]]; then
+exit 0
+fi
+
+# Anything else should be an integer
 
 IS_NUMBER='^[0-9]+$'
 if ! [[ $INPUT =~ $IS_NUMBER ]] ; then
