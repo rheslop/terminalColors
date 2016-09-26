@@ -17,8 +17,7 @@ ATTRIBUTE=0
 # Present menu
 function DISPLAY_MENU {
 clear
-echo "MENU:"
-echo "==============="
+echo "=================== Menu ========================"
 echo ""
 echo -e "FONT\t\tBACKGROUND\tATTRIBUTE"
 echo ""
@@ -32,9 +31,7 @@ echo -e "\E[36m36\E[0m\t\t\E[46m46\E[0m\t\t\E[6m6 (No affect) \E[0m"
 echo -e "\E[37m37\E[0m\t\t\E[47m47\E[0m\t\t\E[7m7 Highlight \E[0m"
 echo -e "\t\t\t\t\E[8m8\E[0m (Invisible)"
 echo -e "\t\t\t\t\E[9m9 Strike through\E[0m"
-echo ""
-echo "Type '0' to be prompted on which category to reset."
-echo "^C to Exit"
+echo "================================================="
 echo ""
 }
 
@@ -115,13 +112,10 @@ GET_INPUT
 function FORMAT_INPUT {
 STYLE_UNFORMATTED=$( echo -e "${ATTRIBUTE}\n${FONT_COLOR}\n${BACKGROUND_COLOR}" | sort -un )
 STYLE_FORMATTED=$( echo $STYLE_UNFORMATTED | awk 'BEGIN { OFS = ";" } { $1 = $1; print}' )
-echo "Style: $STYLE_FORMATTED"
-echo ""
+# echo "Style: $STYLE_FORMATTED"
 }
 
 function DISPLAY_TEXT {
-#echo -e "\E[${STYLE_FORMATTED}m echo -e \"\\\E[${STYLE_FORMATTED}mEXAMPLE TEXT: UNTERMINATED\"" 
-#echo -e "\E[${STYLE_FORMATTED}m echo -e \"\\\E[${STYLE_FORMATTED}mEXAMPLE TEXT:\E[0m\\\E[0mTERMINATED\""
 echo -e "echo -e \"\\\E[${STYLE_FORMATTED}mEXAMPLE TEXT: UNTERMINATED\""
 echo -e "\E[${STYLE_FORMATTED}mEXAMPLE TEXT: UNTERMINATED\E[0m\n"
 echo -e "echo -e \"\\\E[${STYLE_FORMATTED}mEXAMPLE TEXT:\E[0m\\\E[0m TERMINATED\""
