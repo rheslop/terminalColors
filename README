@@ -1,5 +1,6 @@
 colors.sh
 
-This shell script is used assist in echoing stylized text to stdout using bash.  The script will display font colors using the the associated codes - simply type one of the number codes to be provided with example text, ready to cut and paste into your own script.
+Command-line driven shell script to help you develop bash scripts with appropriate output. Highlight text, mark warnings in red, or underline important information in your shell script without having to memorize obscure escape sequences.
+The script displays font styles along with the the associated codes. Use the menu to select your style, and copy and paste from the provided example.
 
 
