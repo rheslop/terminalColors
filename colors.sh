@@ -27,15 +27,13 @@ echo -e "\E[32m32\E[0m\t\t\E[42m42\E[0m\t\t\E[2m2 Faded \E[0m"
 echo -e "\E[33m33\E[0m\t\t\E[43m43\E[0m\t\t\E[3m3 Italics \E[0m"
 echo -e "\E[34m34\E[0m\t\t\E[44m44\E[0m\t\t\E[4m4 Underline \E[0m"
 echo -e "\E[35m35\E[0m\t\t\E[45m45\E[0m\t\t\E[5m5 Blink \E[0m"
-echo -e "\E[36m36\E[0m\t\t\E[46m46\E[0m\t\t\E[6m6 (No affect) \E[0m"
+echo -e "\E[36m36\E[0m\t\t\E[46m46\E[0m\t\t\E[6m6 Blink \E[0m"
 echo -e "\E[37m37\E[0m\t\t\E[47m47\E[0m\t\t\E[7m7 Highlight \E[0m"
 echo -e "\t\t\t\t\E[8m8\E[0m (Invisible)"
 echo -e "\t\t\t\t\E[9m9 Strike through\E[0m"
 echo "================================================="
 echo ""
 }
-
-DISPLAY_MENU
 
 function GET_INPUT {
 
@@ -66,29 +64,6 @@ if [ "$INPUT" -eq 0 ] ; then
 	FONT_COLOR=0
 	BACKGROUND_COLOR=0
 	ATTRIBUTE=0
-
-#	echo ""
-#	echo "Which would you like to reset?"
-#	echo "==============="
-#	echo ""
-#	echo "1. Font Color"
-#	echo "2. Background Color"
-#	echo "3. Attribute"
-#	echo ""
-#	read -p "COLORS: > " ZERO_OPTION
-#
-#	case $ZERO_OPTION in
-#		1) FONT_COLOR=0
-#		;;
-#		2) BACKGROUND_COLOR=0
-#		;;
-#		3) ATTRIBUTE=0
-#		;;
-#		*) echo "" 
-#		echo "Out of range: $ZERO_OPTION"
-#		sleep 1
-#		;;
-#	esac
 
 	FORMAT_INPUT
 	DISPLAY_TEXT
