@@ -1,6 +1,4 @@
 colors.sh
 
-Command-line driven shell script to help you develop bash scripts with appropriate output. Highlight text, mark warnings in red, or underline important information in your shell script without having to memorize obscure escape sequences.
-The script displays font styles along with the the associated codes. Use the menu to select your style, and copy and paste from the provided example.
-
-
+Command-line driven shell script to help you design bash scripts with user-friendly output. Highlight text, mark warnings in red, or underline important information in your shell script by using the referenced escaped sequences alongside their example effects.
+Use the menu to select your chosen style, and copy and paste from the provided example.
